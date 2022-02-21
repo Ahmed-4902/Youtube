@@ -124,39 +124,44 @@ header .right-section a i {
 /* Start Side Bar  */
 aside {
   height: 100%;
-  width: 280px;
+  width: 274px;
   box-sizing: #fff;
   overflow-y: auto;
   background-color: #212121;
 }
-nav {
+@media (max-width: 1300px) {
+  aside {
+    display: none;
+  }
+}
+aside nav {
   width: 100%;
   display: flex;
   flex-direction: column;
   margin: 15px 0;
   padding-right: 15px;
 }
-nav .nav-link {
+aside nav .nav-link {
   display: flex;
   align-items: center;
   padding: 10px 16px;
   text-decoration: none;
   color: #fff;
 }
-nav .nav-link:hover {
+aside nav .nav-link:hover {
   background-color: #383838;
 }
-nav .nav-link span {
+aside nav .nav-link span {
   margin-left: 24px;
   font-size: 1.4rem;
   line-height: 2em;
   font-weight: 400;
-  color: #fff
+  color: #fff;
 }
-nav .active {
+aside nav .active {
   background-color: #383838;
 }
-nav #active-span {
+aside nav #active-span {
   font-weight: 600;
 }
 hr {
@@ -165,7 +170,7 @@ hr {
   border: none;
   margin: 10px 0;
 }
-nav p {
+aside nav p {
   font-size: 1.4rem;
   color: #aaa;
   font-weight: 500;
@@ -177,7 +182,105 @@ nav p {
   width: 24px;
   border-radius: 50%;
 }
+/* Start spicial icon */
+.shorts-i .shape div:first-child {
+  width: 22px;
+  height: 8px;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  border-bottom: none;
+  transform: rotate(-30deg);
+}
+.shorts-i .shape div:nth-child(2) {
+  width: 22px;
+  height: 8px;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  border-top: none;
+  transform: rotate(-30deg);
+  position: relative;
+}
+.shorts-i .shape div:nth-child(3) {
+  width: 0;
+  height: 0;
+  border-top: 3px solid transparent;
+  border-left: 6px solid #fff;
+  border-bottom: 3px solid transparent;
+  position: relative;
+  left: 9px;
+  top: -11px;
+}
+.youtube-premium {
+  font-size: 19px;
+}
+/* End spicial icon */
 /* End Side Bar  */
+
+/* Start Footer  */
+footer {
+  padding: 0 20px 20px;
+}
+footer div {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+footer div a {
+  font-size: 1.3rem;
+  color: #aaa;
+  text-decoration: none;
+  line-height: 2rem;
+  font-weight: 500;
+  margin: 0 10px 0 0;
+}
+footer div a:nth-child(5) {
+  margin-right: 20px;
+}
+footer p {
+  color: #717171;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+}
+/* End Footer  */
+
+/* Start Midum side bar  */
+.mid-side {
+  height: 100%;
+  width: 73px;
+  background-color: #212121;
+}
+.mid-side nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.mid-side nav .nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  margin-bottom: 40px;
+}
+.mid-side nav .nav-link span {
+  margin-top: 8px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4rem;
+}
+@media (min-width: 1300px) {
+  .mid-side {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .mid-side {
+    display: none;
+  }
+}
+/* End Midum side bar  */
 
 /* Start Main  */
 main {
