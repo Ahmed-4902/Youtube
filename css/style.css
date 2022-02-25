@@ -12,18 +12,20 @@ body {
 }
 /* Start Header  */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: relative;
   height: 56px;
   padding: 0 16px;
   background-color: #202020;
+  display: grid;
+  grid-template-columns: min-content minmax(min-content, 652px) min-content;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
 }
 header .left-section {
   display: flex;
   align-items: center;
   cursor: pointer;
-  position: relative;
 }
 header .left-section .icon {
   position: relative;
@@ -45,24 +47,24 @@ header .left-section img {
   margin-bottom: -10px;
   margin-left: 20px;
 }
-header .left-section::after {
+header .left-section .image {
+  position: relative;}
+header .left-section .image::after {
   content: "EG";
   position: absolute;
-  font-size: 12px;
-  color: #706e6e;
+  font-size: 10px;
+  color: rgb(158, 155, 155);
   font-weight: bold;
   right: 38px;
-  top: 0px;
 }
 header .mid-section {
   display: flex;
   align-items: center;
-  margin-left: -9%;
 }
 header .mid-section form {
   display: flex;
   height: 40px;
-  width: 628px;
+  width: 100%;
 }
 header .mid-section input {
   width: 100%;
@@ -103,13 +105,43 @@ header .mid-section .mic {
   margin-left: 10px;
   cursor: pointer;
 }
+header .mid-section a {
+  display: none;
+  position: relative;
+  left: 30px;
+  color: #fff;
+}
+header .right-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 header .right-section a {
-  padding-right: 25px;
   text-decoration: none;
   color: #fff;
+  padding-right: 24px;
+}
+header .right-section a:first-child {
+  padding-right: 20px;
 }
 header .right-section a i {
   font-size: 25px;
+}
+@media (min-width: 500px) and (max-width: 650px){
+  header .mid-section form {
+    display: none;
+  }
+  header .mid-section .mic {
+    display: none;
+  }
+}
+@media (min-width: 651px) {
+  header .right-section a:first-child {
+    display: none;
+  }
+  header .right-section .mic {
+    display: none;
+  }
 }
 /* End Header  */
 
