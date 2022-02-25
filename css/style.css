@@ -10,6 +10,32 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: #fff;
 }
+
+/* Start Custome Scrollbar  */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #919191;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #585858;
+}
+aside::-webkit-scrollbar {
+  width: 8px;
+}
+aside::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+aside:hover::-webkit-scrollbar-thumb {
+  background-color: #585858;
+}
+/* End Custome Scrollbar  */
+
 /* Start Header  */
 header {
   position: relative;
@@ -48,7 +74,8 @@ header .left-section img {
   margin-left: 20px;
 }
 header .left-section .image {
-  position: relative;}
+  position: relative;
+}
 header .left-section .image::after {
   content: "EG";
   position: absolute;
@@ -127,7 +154,7 @@ header .right-section a:first-child {
 header .right-section a i {
   font-size: 25px;
 }
-@media (min-width: 500px) and (max-width: 650px){
+@media (min-width: 500px) and (max-width: 650px) {
   header .mid-section form {
     display: none;
   }
